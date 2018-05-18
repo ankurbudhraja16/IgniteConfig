@@ -38,6 +38,18 @@
                     -->
                     <bean
                         class="org.apache.ignite.spi.discovery.tcp.ipfinder.kubernetes.TcpDiscoveryKubernetesIpFinder"/>
+						
+						  <bean class="org.apache.ignite.spi.discovery.tcp.ipfinder.multicast.TcpDiscoveryMulticastIpFinder">
+                        <property name="addresses">
+                            <list>
+                                <!-- In distributed environment, replace with actual host IP address. -->
+                                <value>127.0.0.1:47500..47509</value>
+								<value>10.47.0.15</value>
+								<value>10.35.0.13</value>
+                            </list>
+                        </property>
+                    </bean>
+						
                 </property>
             </bean>
         </property>
