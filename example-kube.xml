@@ -38,14 +38,6 @@
                     -->
                     <bean
                         class="org.apache.ignite.spi.discovery.tcp.ipfinder.kubernetes.TcpDiscoveryKubernetesIpFinder"/>
-						<property name="addresses">
-                            <list>
-                                <!-- In distributed environment, replace with actual host IP address. -->
-                                <value>10.35.0.13</value>
-								<value>10.47.0.15</value>
-								<value>10.39.0.15</value>
-                            </list>
-                        </property>
                 </property>
             </bean>
         </property>
